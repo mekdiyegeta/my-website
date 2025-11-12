@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Mekdes</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Library CSS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Skill cards */
+    .skill-card {
+      cursor: pointer;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s, max-height 0.5s, padding 0.3s;
+      overflow: hidden;
+      max-height: 150px;
+      position: relative;
+    }
+
+    .skill-card.expanded {
+      max-height: 400px;
+      padding: 20px 20px 40px 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: scale(1.02);
+    }
+
+    .skill-card h4 {
+      margin-bottom: 10px;
+    }
+
+    /* More info initially hidden */
+    .skill-card .more-info {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      margin-top: 10px;
+    }
+
+    /* Slide in on expand */
+    .skill-card.expanded .more-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Click indicator */
+    .skill-card::after {
+      content: 'Click to expand';
+      font-size: 12px;
+      color: #555;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+
+    .skill-card.expanded::after {
+      content: 'Click to collapse';
+    }
+  </style>
+</head>
+<body class="theme-skills">
+  <header class="site-header" data-aos="fade-down">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Thcsmart</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-intro" data-aos="fade-up">
+      <h1>My Skills</h1>
+      <p>Technical and soft skills that I use in projects and teamwork.</p>
+    </section>
+
+    <section class="skills-grid container">
+      <div class="skill-card" data-aos="fade-right" data-aos-delay="100">
+        <h4>Frontend</h4>
+        <p>HTML, CSS, JavaScript</p>
+        <div class="more-info">
+          <p>Experience with responsive design, CSS frameworks, and interactive UI components.</p>
+        </div>
+      </div>
+
+      <div class="skill-card" data-aos="fade-left" data-aos-delay="200">
+        <h4>Languages</h4>
+        <p>C++, Java</p>
+        <div class="more-info">
+          <p>Strong programming fundamentals, object-oriented design, and problem-solving experience.</p>
+        </div>
+      </div>
+
+      <div class="skill-card" data-aos="fade-right" data-aos-delay="300">
+        <h4>Databases</h4>
+        <p>Relational Databases, Advanced Database design</p>
+        <div class="more-info">
+          <p>Knowledge of SQL, database normalization, indexing, and query optimization.</p>
+        </div>
+      </div>
+
+      <div class="skill-card" data-aos="fade-left" data-aos-delay="400">
+        <h4>Soft Skills</h4>
+        <p>Teamwork, Communication, Problem-solving</p>
+        <div class="more-info">
+          <p>Experience collaborating in teams, effective communication, and critical thinking for problem resolution.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="container">
+      <p>© <span id="year4"></span> Mekdes</p>
+    </div>
+  </footer>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    // Click-to-expand functionality
+    const skillCards = document.querySelectorAll('.skill-card');
+
+    skillCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+  </script>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

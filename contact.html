@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Mekdes</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Boxicons CDN -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #333;
+      color: #fff;
+      border-radius: 50%;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      font-size: 32px; /* icon size */
+    }
+
+    /* Responsive sizes */
+    @media (max-width: 600px) {
+      .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .social-icons a {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .social-icons a {
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+      }
+    }
+
+    /* Hover effect */
+    .social-icons a:hover {
+      transform: scale(1.1);
+      background-color: #555;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="theme-contact">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Thcsmart</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-intro">
+      <h1>Contact</h1>
+      <p>I'd love to hear from you. You can reach me via email or on social platforms.</p>
+    </section>
+
+    <section class="contact-grid container">
+      <div class="contact-card">
+        <h3>Get in touch</h3>
+        <ul>
+          <li><strong>Address:</strong> A.A</li>
+          <li><strong>Phone:</strong> +125976778282</li>
+          <li><strong>Telegram:</strong> 125976778282 (mekdi)</li>
+        </ul>
+        <p class="muted">Or send a message using the form.</p>
+      </div>
+
+      <div class="contact-form">
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain" id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="socials container">
+      <h4>Social</h4>
+<div class="social-icons">
+  <a href="https://t.me/mekdi" target="_blank"><i class='bx bxl-telegram'></i></a>
+  <a href="https://wa.me/+125976778282" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+  <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+  <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+  <a href="https://github.com" target="_blank"><i class='bx bxl-github'></i></a>
+</div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year6"></span> Mekdes</p>
+    </div>
+  </footer>
+  <script src="contact.js" defer></script>
+</body>
+</html>
